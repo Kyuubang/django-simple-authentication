@@ -7,7 +7,7 @@
 }
 
 body{
-	height: 100vh;
+	height: 150vh;
 	background:  linear-gradient(
 		135deg,
 		#f0efeb,
@@ -17,21 +17,22 @@ body{
 
 form{
 	background-color: #ffffff;
-	height: 400px;
-	width: 850px;
+	height: 850px;
+	width: 400px;
 	position: absolute;
 	margin: auto;
 	left: 0;
 	right: 0;
-	top: 0;
+	top: 50%;
 	bottom: 0; 
 	border-radius: 5px;
 	box-shadow: 0 20px 25px rgba(0,0,0,0.35);
-	padding: 0 0; 
 }
 
 input {
+	padding-top: 10px;
    	border: none;
+	display: block;
 	border-bottom: 2px solid #f4f0ec;
 	outline: none;
 	-webkit-transition: 0.5s;
@@ -48,65 +49,40 @@ input:focus{
 	color: #696969;
 }
 
-#username {
-	top: 130px; 
-	right: 50px;
-}
-
-#password {
-	top: 210px;
-	right: 50px;	
-}
-
-#fpassword{
-	position: absolute;
-	top: 240px;
-	right: 50px;
+h3 {
 	font-family: "Poppins",sans-serif;
-	font-size: 10px;
+	font-size: 50px;
+	padding-left: 10px;
+	margin-bottom: 30px;
 }
 
-#createone{
-	position: absolute;
-	top: 240px;
-	right: 290px;
+.form{
+	padding-left: 20px; 
 	font-family: "Poppins",sans-serif;
-	font-size: 10px;
 }
 
 label{
+	font-size: 16px;
 	position: absolute;
-	font-family: "Poppins", sans-serif;
+}
+
+label[for="username"] {
+	margin-top: 0;
+}
+label[for="firstname"] {
 	top: 50px;
-	right: 210px;
-	font-size: 25px;
 }
 
-#submit{
-	border: none;
-	border-radius: 5px;
-	width: 300px;
-	height: 40px;
-	position: absolute;
-	top: 300px;
-	right: 50px;
-	font-family: "Poppins", sans-serif;
+#firstname {
+	margin-top: 70px;
+}
+/* label[for=confirm] {
+	bottom: 100px;
+	left: 10px;
 }
 
-#picture{
-	width: 450px;
-	height: 450px;
-	position: absolute;
-	left: 12px;
-	top: -25px;
-}
 
-@media only screen and (max-width: 850px){
-	form{
-		width: 400px;
-	}
+#confirm_input{
+	bottom: 400px;
 
-	#picture{
-		display: none;
-	}
 }

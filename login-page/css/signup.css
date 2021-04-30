@@ -36,7 +36,7 @@ form *{
 
 }
 
-input {
+input:not(#update) {
 	padding-top: 10px;
 	display: block;
 	border-bottom: 2px solid #f4f0ec;
@@ -47,7 +47,7 @@ input {
 	font-size: 14px;
 	letter-spacing: 0.5px;
 	width: 300px;
-	height: 50px;
+	height: 45px;
 	position: absolute;
 	margin-left: 20px;
 	font-size: 16px;
@@ -116,4 +116,36 @@ label[for="password"]{
 
 label[for="confirm"]{
 	top: 595px;
+}
+
+#update {
+	font-size: 10px;
+	position: absolute;
+	left: 20px;
+	top: 690px;
+}
+
+label[for="update"]{
+	font-size: 10px;
+	top: 690px;
+	left: 25px;
+}
+
+#signup{
+	border: none;
+	outline: none;
+	width: 300px;
+	height: 40px;
+	border-radius: 5px;
+	font-family: "Poppins",sans-serif;
+	position: absolute;
+	top: 742px;
+	margin-left: 20px;
+
+}
+
+label[for="signup"]{
+	bottom: 30px;
+	margin-right: 20px;
+	font-size: 9px;
 }

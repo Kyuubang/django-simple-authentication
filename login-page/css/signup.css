@@ -18,20 +18,26 @@ body{
 form{
 	background-color: #ffffff;
 	height: 850px;
-	width: 400px;
+	width: 350px;
 	position: absolute;
 	margin: auto;
 	left: 0;
 	right: 0;
 	top: 50%;
 	bottom: 0; 
-	border-radius: 5px;
+	border-radius: 8px;
 	box-shadow: 0 20px 25px rgba(0,0,0,0.35);
+}
+
+form *{
+	font-family: "Poppins",sans-serif;
+	border: none;
+	letter-spacing: 0.5px;
+
 }
 
 input {
 	padding-top: 10px;
-   	border: none;
 	display: block;
 	border-bottom: 2px solid #f4f0ec;
 	outline: none;
@@ -41,7 +47,10 @@ input {
 	font-size: 14px;
 	letter-spacing: 0.5px;
 	width: 300px;
+	height: 50px;
 	position: absolute;
+	margin-left: 20px;
+	font-size: 16px;
 }
 
 input:focus{
@@ -50,39 +59,61 @@ input:focus{
 }
 
 h3 {
-	font-family: "Poppins",sans-serif;
-	font-size: 50px;
-	padding-left: 10px;
-	margin-bottom: 30px;
+	font-size: 40px;
+	margin-left: 10px;
 }
 
-.form{
-	padding-left: 20px; 
-	font-family: "Poppins",sans-serif;
-}
-
-label{
-	font-size: 16px;
+label {
+	display: inline-block;
 	position: absolute;
+	margin-left: 20px;
+	font-size: 18px;
 }
 
-label[for="username"] {
-	margin-top: 0;
+#username {
+	top: 115px;
 }
-label[for="firstname"] {
-	top: 50px;
+
+label[for="username"]{
+	top: 95px;
 }
 
 #firstname {
-	margin-top: 70px;
-}
-/* label[for=confirm] {
-	bottom: 100px;
-	left: 10px;
+	top: 215px;
 }
 
+label[for="firstname"]{
+	top: 195px;
+}
 
-#confirm_input{
-	bottom: 400px;
+#lastname {
+	top: 315px;
+}
 
+label[for="lastname"]{
+	top: 295px;
+}
+
+#email {
+	top: 415px;
+}
+
+label[for="email"]{
+	top: 395px;
+}
+
+#password {
+	top: 515px;
+}
+
+label[for="password"]{
+	top: 495px;
+}
+
+#confirm {
+	top: 615px;
+}
+
+label[for="confirm"]{
+	top: 595px;
 }

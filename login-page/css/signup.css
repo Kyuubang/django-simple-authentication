@@ -1,0 +1,151 @@
+*,
+*:before,
+*:after{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	height: 150vh;
+	background:  linear-gradient(
+		135deg,
+		#f0efeb,
+		#adb5bd
+	);
+}
+
+form{
+	background-color: #ffffff;
+	height: 850px;
+	width: 350px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 50%;
+	bottom: 0; 
+	border-radius: 8px;
+	box-shadow: 0 20px 25px rgba(0,0,0,0.35);
+}
+
+form *{
+	font-family: "Poppins",sans-serif;
+	border: none;
+	letter-spacing: 0.5px;
+
+}
+
+input:not(#update) {
+	padding-top: 10px;
+	display: block;
+	border-bottom: 2px solid #f4f0ec;
+	outline: none;
+	-webkit-transition: 0.5s;
+	font-family: "Poppins",sans-serif;
+	font-weight: 600px;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	width: 300px;
+	height: 45px;
+	position: absolute;
+	margin-left: 20px;
+	font-size: 16px;
+}
+
+input:focus{
+	border-bottom: 2px solid #c0c0c0;
+	color: #696969;
+}
+
+h3 {
+	font-size: 40px;
+	margin-left: 10px;
+}
+
+label {
+	display: inline-block;
+	position: absolute;
+	margin-left: 20px;
+	font-size: 18px;
+}
+
+#username {
+	top: 115px;
+}
+
+label[for="username"]{
+	top: 95px;
+}
+
+#firstname {
+	top: 215px;
+}
+
+label[for="firstname"]{
+	top: 195px;
+}
+
+#lastname {
+	top: 315px;
+}
+
+label[for="lastname"]{
+	top: 295px;
+}
+
+#email {
+	top: 415px;
+}
+
+label[for="email"]{
+	top: 395px;
+}
+
+#password {
+	top: 515px;
+}
+
+label[for="password"]{
+	top: 495px;
+}
+
+#confirm {
+	top: 615px;
+}
+
+label[for="confirm"]{
+	top: 595px;
+}
+
+#update {
+	font-size: 10px;
+	position: absolute;
+	left: 20px;
+	top: 690px;
+}
+
+label[for="update"]{
+	font-size: 10px;
+	top: 690px;
+	left: 25px;
+}
+
+#signup{
+	border: none;
+	outline: none;
+	width: 300px;
+	height: 40px;
+	border-radius: 5px;
+	font-family: "Poppins",sans-serif;
+	position: absolute;
+	top: 742px;
+	margin-left: 20px;
+
+}
+
+label[for="signup"]{
+	bottom: 30px;
+	margin-right: 20px;
+	font-size: 9px;
+}

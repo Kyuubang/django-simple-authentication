@@ -8,11 +8,8 @@
 
 body{
 	height: 100vh;
-	background:  linear-gradient(
-		135deg,
-		#f0efeb,
-		#adb5bd
-	);
+   	background: url(../img/pexels-lorenzo-242236.jpg) no-repeat center center;
+	background-size: cover;   
 }
 
 form{

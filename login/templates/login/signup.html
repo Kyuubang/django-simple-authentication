@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Placeholder Animation</title>
-    <!--Google Font-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <!--Stylesheet-->
-    <link rel="stylesheet" href="css/signup.css">
-</head>
+{% load static %}
 
-<body>
-	<form>
+{% block head %}
+	<title>baysite - register</title>
+	<link rel="stylesheet" href="{% static "css/signup.css" %}">
+{% endblock %}
+
+
+{% block content %}
+	<form method="POST">
 		<h3>Sign Up!</h3>
 		
 		<input type="text" id="username" placeholder="johndoe832">
@@ -37,4 +34,4 @@
 		<label for="signup">By creating an account, you agree to the Terms of Service, Privacy Policy, and Data Processing Terms.</label>
 		<button id="signup">Sign Up</button>
 	</form>
-</body>
+{% endblock %}

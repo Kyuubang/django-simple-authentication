@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Simple Login Page</title>
-    <!--Google Font-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <!--Stylesheet-->
-    <link rel="stylesheet" href="css/forgot.css">	
-</head>
+{% load static %}
 
-<body>
+{% block head %}
+	<title>Simple Login Page</title>
+	<link rel="stylesheet" href="{% static "css/forgot.css" %}">	
+{% endblock %}
+
+{% block content %}
 	<form>
 		<label id="labelemail">Enter your email</label>
 		<input type="text" id="email" placeholder="example@example.com">
 		<button id="submit">Send password reset email</button>
 	</form>
-</body>
+{% endblock  %}

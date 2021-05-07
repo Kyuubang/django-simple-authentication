@@ -7,31 +7,26 @@
 
 
 {% block content %}
-	<form method="POST">
+	<form method="POST" actions="">
+		{% csrf_token %}
 		<h3>Sign Up!</h3>
 		
-		<input type="text" id="username" placeholder="johndoe832">
-		<label for="username">Username</label>
+		<!--<input type="text" id="username" placeholder="johndoe832">-->
+		{{ form.username  }}
 	
-		<input type="text" id="firstname" placeholder="John"></input>
-		<label for="firstname">First Name</label>
+		<!--<input type="text" id="firstname" placeholder="John"></input>-->
+		{{ form.firstname }}
+
+		{{ form.lastname }}
+
+		{{ form.email }}
+
+		{{ form.password }}
 		
-		<label for="lastname">Last Name</label>	
-		<input type="text" id="lastname" placeholder="Doe"></input>
-
-		<label for="email">Active Email</label>
-		<input type="text" id="email" placeholder="johndoe@example.com"></input>
-
-		<label for="password">Create New Password</label>
-		<input type="password" id="password"></input>
-
-		<label for="confirm">Confirm Password</label>
-		<input type="password" id="confirm"></input>
-
 		<label for="update">Send me occasional product updates and announcements.</label>
 		<input type="checkbox" id="update"></input>
 		
 		<label for="signup">By creating an account, you agree to the Terms of Service, Privacy Policy, and Data Processing Terms.</label>
 		<button id="signup">Sign Up</button>
 	</form>
-{% endblock %}
+	{% endblock %}

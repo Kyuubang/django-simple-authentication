@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 #from django.contrib.auth.forms import UserCreationForm
 from .forms import NameForm
 
@@ -15,10 +15,12 @@ def login_page(request):
     return render(request, 'login/login.html', context)
 
 def signup_page(request):
-    form = NameForm()
-    context = {
-            'form': form,
-            }
+    if request.method == "POST":
+        form = NameForm(request.POST)
+        if form.is_valid():
+            return redirect('login')
+    else:
+        form = NameForm()
     return render(request, 'login/signup.html', context)
 
 def forgot_page(request):

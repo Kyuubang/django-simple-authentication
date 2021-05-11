@@ -10,3 +10,8 @@ media
 .pyc
 .python-version
 
+# virtualenv
+.venv
+
+# pycharm
+.idea

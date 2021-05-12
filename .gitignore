@@ -15,3 +15,6 @@ media
 
 # pycharm
 .idea
+
+# vim
+.swp

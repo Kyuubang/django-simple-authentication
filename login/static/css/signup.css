@@ -76,11 +76,11 @@ label[for="id_username"]{
 	top: 95px;
 }
 
-#id_firstname {
+#id_first_name {
 	top: 215px;
 }
 
-label[for="id_firstname"]{
+label[for="id_first_name"]{
 	top: 195px;
 }
 
@@ -100,11 +100,11 @@ label[for="id_email"]{
 	top: 395px;
 }
 
-#id_password {
+#id_password1 {
 	top: 515px;
 }
 
-label[for="id_password"]{
+label[for="id_password1"]{
 	top: 495px;
 }
 

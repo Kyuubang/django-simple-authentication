@@ -1,27 +1,46 @@
 from django.shortcuts import render, redirect
-#from django.contrib.auth.forms import UserCreationForm
-from .forms import NameForm
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+
+# custom forms (forms.py)
+from .forms import UserRegister
 
 # Create your views here.
+#@login_required(login_url='login')
 def index_page(request):
-    form = NameForm()
-    context = {
-            'form': form,
-            }
-    return render(request, 'login/index.html', context)
+    # form = UserRegister()
+    # context = {
+    #         'form': form,
+    #         'username': "Bayhaqi",
+    #         }
+    context = {}
+    return render(request, 'accounts/index.html', context)
 
 def login_page(request):
     context = {}
-    return render(request, 'login/login.html', context)
+    return render(request, 'accounts/login.html', context)
 
-def signup_page(request):
+def register_page(request):
+    # if request.method == "POST":
+    #     form = UserRegister(request.POST)
+    #     if form.is_valid():
+    #         return redirect('login')
+    # else:
+    #     form = UserRegister()
+    # form = UserRegister()
+
+    form = UserRegister()
+
     if request.method == "POST":
-        form = NameForm(request.POST)
+        form = UserRegister(request.POST)
         if form.is_valid():
-            return redirect('login')
-    else:
-        form = NameForm()
-    return render(request, 'login/signup.html', context)
+            form.save()
+        else:
+            form.send_same_password_message()
+    context = {
+        'form' : form,
+    }
+    return render(request, 'accounts/register.html', context)
 
 def forgot_page(request):
     context = {}

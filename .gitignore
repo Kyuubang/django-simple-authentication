@@ -4,17 +4,17 @@
 *.pyc
 __pycache__
 db.sqlite3
-media
+staticfiles
 
 # pyenv and python
 .pyc
 .python-version
 
 # virtualenv
-.venv
+.venv/
 
 # pycharm
-.idea
+.idea/
 
 # vim
 .swp

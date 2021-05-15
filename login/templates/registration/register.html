@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}register{% endblock %}
+
+{% block content %}
+<form method="POST" action="">
+    {% csrf_token %}
+
+    {{ form.username.label }}
+    {{ form.username }}
+
+    {{ form.first_name.label }}
+    {{ form.first_name }}
+
+    {{ form.last_name.label }}
+    {{ form.last_name }}
+
+    {{ form.email.label }}
+    {{ form.email }}
+
+    {{ form.password1.label }}
+    {{ form.password1 }}
+
+    {{ form.password2.label }}
+    {{ form.password2 }}
+
+    {{ form.errors }}
+
+    <input type="submit" name="Create User">
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}forgot{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/forgot.css" %}">
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <label id="labelemail">Enter your email</label>
+    <input type="text" id="email" placeholder="example@example.com">
+    <button type="submit" id="submit">Send password reset email</button>
+</form>
+{% endblock %}

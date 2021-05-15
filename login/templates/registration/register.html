@@ -1,5 +1,9 @@
+{% extends 'base/base.html' %}
+{% load static %}
 
+{% block title %}register{% endblock %}
 
+{% block content %}
 <form method="POST" action="">
     {% csrf_token %}
 
@@ -24,6 +28,5 @@
     {{ form.errors }}
 
     <input type="submit" name="Create User">
-
-
 </form>
+{% endblock %}

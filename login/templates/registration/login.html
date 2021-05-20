@@ -3,13 +3,57 @@
 
 {% block title %} login {% endblock %}
 
-{% block content %}
-<h1>login</h1>
+{% block head %}
+    <style>
+        #id_username, #id_password{
+            border: none;
+            outline: none;
+        }
+    </style>
+{% endblock %}
 
-<form method="POST">
-    {%  csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Log in</button>
-    <a href="{% url 'register' %}">Create one?</a>
-</form>
+{% block content %}
+    <section class="hero is-primary is-fullheight">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+                    <form class="box" method="post" action="">
+                        {% csrf_token %}
+                        <div class="field has-text-centered">
+                           <h6 class="title is-6 has-text-black">Login</h6>
+                        </div>
+                        <div class="field">
+                            <label class="label">Username</label>
+                            <div class="control has-icons-left">
+                                <div class="input is-focused is-fullwidth">
+                                    {{ form.username }}
+                                </div>
+                                <span class="icon is-small is-left has-text-grey-dark">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Password</label>
+                            <div class="control has-icons-left">
+                                <div class="input is-focused">
+                                    {{ form.password }}
+                                </div>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-eye-slash"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <button type="submit" class="button is-primary is-fullwidth">Login</button>
+                        <div class="is-size-7">
+{#                            <a class="has-text-right" href="{% url 'register' %}">Register now</a>#}
+                            <a class="has-text-right" href="{% url 'forgot' %}">Forgot your password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
 {% endblock %}

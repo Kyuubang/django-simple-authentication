@@ -2,31 +2,65 @@
 {% load static %}
 
 {% block title %}register{% endblock %}
+{% block head %}
+    <style>
+        input[id^="id_"]{
+            border: none;
+            outline: none;
+        }
+    </style>
+{% endblock %}
 
 {% block content %}
-<form method="POST" action="">
-    {% csrf_token %}
-
-    {{ form.username.label }}
-    {{ form.username }}
-
-    {{ form.first_name.label }}
-    {{ form.first_name }}
-
-    {{ form.last_name.label }}
-    {{ form.last_name }}
-
-    {{ form.email.label }}
-    {{ form.email }}
-
-    {{ form.password1.label }}
-    {{ form.password1 }}
-
-    {{ form.password2.label }}
-    {{ form.password2 }}
-
-    {{ form.errors }}
-
-    <input type="submit" name="Create User">
-</form>
+    <section class="hero is-fullheight is-warning">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths-desktop">
+                    <form class="box" method="post" action="">
+                        {% csrf_token %}
+                        <div class="columns">
+                            <div class="column">
+                                <div class="field">
+                                    <label class="label">Username</label>
+                                    <div class="input is-focused">
+                                        {{ form.username }}
+                                    </div>
+                                    <label class="label">First Name</label>
+                                    <div class="input is-focused">
+                                        {{ form.first_name }}
+                                    </div>
+                                    <label class="label">Last Name</label>
+                                    <div class="input is-focused">
+                                        {{ form.last_name }}
+                                    </div>
+                                    <label class="label">Email</label>
+                                    <div class="input is-focused">
+                                        {{ form.email }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="field">
+                                    <label class="label">Password</label>
+                                    <div class="input is-focused">
+                                        {{ form.password1 }}
+                                    </div>
+                                    <label class="label">Password Confirmation</label>
+                                    <div class="input is-focused">
+                                        {{ form.password2 }}
+                                    </div>
+                                </div>
+                                <button class="button is-success is-fullwidth mb-2" type="submit">Register</button>
+                                <div class="is-size-7 has-text-right" id="login">
+                                    <a href="{% url 'login' %}">Login now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
 {% endblock %}

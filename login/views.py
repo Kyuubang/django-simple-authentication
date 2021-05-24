@@ -71,3 +71,7 @@ def forgot_page(request):
     context = {}
     return render(request, 'registration/forgot.html', context)
 
+def custom_404_view(request, exception):
+    return render(request, '404.html')
+
+

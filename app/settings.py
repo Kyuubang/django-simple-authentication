@@ -22,20 +22,6 @@ SECRET_KEY = 'yfxk-kj!g2p+3lq8by_tay(0qk7!vs$4gr+c8@*n6p(#)(d2n-''))'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/    
-
-#STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-#STATIC_URL = '/static/'    
-
-# Extra places for collectstatic to find static files.
-#STATICFILES_DIRS = [
-#            os.path.join(PROJECT_ROOT, 'static'),
-#            
-#        ]
-
-
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -52,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login.apps.LoginConfig',
+    'django_simple_bulma',
 ]
 
 MIDDLEWARE = [
@@ -135,6 +122,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'login', 'static')]
 STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django_simple_bulma.finders.SimpleBulmaFinder'
+]
 
 # login and logout urls settings
 LOGIN_REDIRECT_URL = 'index'

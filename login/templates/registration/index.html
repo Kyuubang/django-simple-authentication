@@ -2,12 +2,29 @@
 {% load static %}
 
 {% block content %}
-{% if user.is_authenticated %}
-<h1>Hello, {{ user.username }}!</h1>
-<a href="{% url 'logout' %}" >Log Out</a>
-{%  else %}
-<p>You are not logged in!</p>
-<a href="{% url 'login' %}">Log In</a>
-<a href="{% url 'register' %}">Register now</a>
-{% endif %}
+    <section class="hero is-fullheight is-info">
+        <div class="hero-body">
+            {% if user.is_authenticated %}
+                <div class="">
+                    <p class="title is-1 mb-2">
+                        {{ greetings }}, {{ user.username }}
+                    </p>
+                    <a href="{% url 'logout' %}" class="button is-inverted is-info is-family-monospace">logout</a>
+                </div>
+            {% else %}
+                <div class="">
+                    <p class="title is-1">You are not logged in!</p>
+                    <div class="is-family-monospace">
+                        <a href="{% url 'login' %}" class="button is-success">login</a>
+                        <span class="is-size-5">or</span>
+                        <a href="{% url 'register' %}" class="button is-link ">Register</a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
+
+{% block site_footer %}
+    {% include 'base/footer.html' %}
 {% endblock %}

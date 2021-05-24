@@ -1,3 +1,5 @@
+import random
+
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -8,14 +10,26 @@ from django.contrib import messages
 from .forms import UserRegister
 
 # Create your views here.
-@login_required(login_url='login')
+#@login_required(login_url='login')
 def index_page(request):
-    # form = UserRegister()
-    # context = {
-    #         'form': form,
-    #         'username': "Bayhaqi",
-    #         }
-    context = {}
+    greetings = random.choice([
+        'Hello',
+        'Hi',
+        'Hola',
+        "Assalamu'alaikum",
+        'Bonjour',
+        'Ciao',
+        'OLÀ',
+        'ZDRAS-TVUY-TE',
+        'Ohayo',
+        'Marhaba',
+        'Ni Hau',
+        'Halo',
+    ])
+
+    context = {
+        'greetings' : greetings,
+    }
     return render(request, 'registration/index.html', context)
 
 # def login_page(request):
@@ -56,4 +70,8 @@ def register_page(request):
 def forgot_page(request):
     context = {}
     return render(request, 'registration/forgot.html', context)
+
+def custom_404_view(request, exception):
+    return render(request, '404.html')
+
 

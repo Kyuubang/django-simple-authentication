@@ -24,6 +24,9 @@ depedency for this project,
 - django-simple-bulma 2.2.0
 - python 3.8
 
+for postgres db
+- psycopg2-binary 2.9.2
+
 for simple step you can type this command to install 
 all depedency.
 ```bash
@@ -43,3 +46,6 @@ and now running django server to see the result.
 ```bash
 python manage.py runserver
 ```
+
+### Advance documentation
+please refer to how to deploy and harden for advance guides.

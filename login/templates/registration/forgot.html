@@ -8,6 +8,7 @@
 
 {% block content %}
 <form method="POST">
+    {% csrf_token %}
     <label id="labelemail">Enter your email</label>
     <input type="text" id="email" placeholder="example@example.com">
     <button type="submit" id="submit">Send password reset email</button>

@@ -81,9 +81,9 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'absen_db',
-        'USER': 'absen',
-        'PASSWORD': 'root',
+        'NAME': 'djangoauth',
+        'USER': 'djangoauth',
+        'PASSWORD': 'djangoauth',
         'HOST': '10.5.0.2',
         'PORT': '5432',
     }

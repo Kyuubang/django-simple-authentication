@@ -25,28 +25,14 @@ def index_page(request):
         'Marhaba',
         'Ni Hau',
         'Halo',
+        'Guten Morgen',
+        'Danke',
     ])
 
     context = {
         'greetings' : greetings,
     }
     return render(request, 'registration/index.html', context)
-
-# def login_page(request):
-#     context = {}
-#
-#     username = request.POST.get('username')
-#     password = request.POST.get('password')
-#
-#     user = authenticate(request, username=username, password=password)
-#
-#     if user is not None:
-#         login(request, user)
-#         redirect('index')
-#     else:
-#         return render(request, 'accounts/login.html', context)
-#
-#     return render(request, 'accounts/login.html', context)
 
 def register_page(request):
     if request.user.is_authenticated:

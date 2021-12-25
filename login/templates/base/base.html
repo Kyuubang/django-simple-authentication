@@ -9,6 +9,7 @@
     {% load django_simple_bulma %}
     {% bulma %}
     {% font_awesome %}
+    {% csrf_token %}
 
     {# default block title #}
     <title>bayhaqi - {% block title %}learn website{% endblock %}</title>
@@ -17,7 +18,6 @@
         <style>
             .footer {
                 padding: 1.5rem 2rem 1.5rem;
-                margin:
             }
         </style>
     {% endblock %}

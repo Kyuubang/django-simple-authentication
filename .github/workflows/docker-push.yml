@@ -35,5 +35,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USER }}/django-simple-authentication:${{ steps.sha_tag.outputs.tag }}
-        build-args: |
-          git_sha=${{ github.sha }}
+          build-args: |
+            git_sha=${{ github.sha }}

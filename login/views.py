@@ -27,6 +27,7 @@ def index_page(request):
         'Halo',
         'Guten Morgen',
         'Danke',
+        'Salam',
     ])
 
     context = {

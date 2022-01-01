@@ -10,7 +10,6 @@ on:
 jobs:
   build:
     name: Build Docker Image
-    if: github.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push'
     runs-on: ubuntu-20.04
 
     steps:

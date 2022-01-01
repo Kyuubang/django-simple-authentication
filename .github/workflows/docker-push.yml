@@ -13,12 +13,6 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - name: Create SHA Container Tag
-        id: sha_tag
-        run: |
-          tag=$(cut -c 1-7 <<< $GITHUB_SHA)
-          echo "::set-output name=tag::$tag"
-
       - name: Checkout
         uses: actions/checkout@v2
 

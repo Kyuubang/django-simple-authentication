@@ -30,4 +30,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/Kyuubang/django-simple-authentication:nightly
+            ghcr.io/kyuubang/django-simple-authentication:nightly

@@ -5,6 +5,7 @@
 __pycache__
 db.sqlite3
 staticfiles/
+static
 
 # pyenv and python
 .pyc
